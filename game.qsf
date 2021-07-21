@@ -1,0 +1,140 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 12:31:23  July 10, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		game_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name DEVICE EP4CGX150DF31C7
+set_global_assignment -name TOP_LEVEL_ENTITY game
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:31:23  JULY 10, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE game.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE game_tb.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH game_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME game_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id game_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME game_tb -section_id game_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE game_tb.v -section_id game_tb
+set_location_assignment PIN_T23 -to L0
+set_location_assignment PIN_T24 -to L1
+set_location_assignment PIN_V27 -to L2
+set_location_assignment PIN_W25 -to L3
+set_location_assignment PIN_T21 -to L4
+set_location_assignment PIN_T26 -to L5
+set_location_assignment PIN_R25 -to L6
+set_location_assignment PIN_T27 -to L7
+set_location_assignment PIN_P25 -to L8
+set_location_assignment PIN_R24 -to L9
+set_location_assignment PIN_AJ16 -to clock
+set_location_assignment PIN_U30 -to k1
+set_location_assignment PIN_V21 -to k2
+set_location_assignment PIN_C2 -to k3
+set_location_assignment PIN_AB30 -to k4
+set_location_assignment PIN_C30 -to minus
+set_location_assignment PIN_J26 -to multiply
+set_location_assignment PIN_H25 -to plus
+set_location_assignment PIN_V28 -to reset
+set_location_assignment PIN_U21 -to st1
+set_location_assignment PIN_T28 -to st2
+set_location_assignment PIN_R30 -to st3
+set_location_assignment PIN_P30 -to st4
+set_location_assignment PIN_R29 -to st5
+set_location_assignment PIN_R26 -to st6
+set_location_assignment PIN_N26 -to st7
+set_location_assignment PIN_F14 -to y[6]
+set_location_assignment PIN_D16 -to y[5]
+set_location_assignment PIN_F16 -to y[4]
+set_location_assignment PIN_F11 -to y[3]
+set_location_assignment PIN_G11 -to y[2]
+set_location_assignment PIN_E12 -to y[1]
+set_location_assignment PIN_E15 -to y[0]
+set_location_assignment PIN_G10 -to y_1[6]
+set_location_assignment PIN_J9 -to y_1[5]
+set_location_assignment PIN_G12 -to y_1[4]
+set_location_assignment PIN_F12 -to y_1[3]
+set_location_assignment PIN_G13 -to y_1[2]
+set_location_assignment PIN_B13 -to y_1[1]
+set_location_assignment PIN_G14 -to y_1[0]
+set_location_assignment PIN_F10 -to y_2[6]
+set_location_assignment PIN_F4 -to y_2[5]
+set_location_assignment PIN_F6 -to y_2[4]
+set_location_assignment PIN_AG30 -to y_2[3]
+set_location_assignment PIN_F7 -to y_2[2]
+set_location_assignment PIN_G7 -to y_2[1]
+set_location_assignment PIN_G8 -to y_2[0]
+set_location_assignment PIN_D4 -to y_3[6]
+set_location_assignment PIN_D5 -to y_3[5]
+set_location_assignment PIN_E3 -to y_3[4]
+set_location_assignment PIN_E4 -to y_3[3]
+set_location_assignment PIN_E6 -to y_3[2]
+set_location_assignment PIN_D7 -to y_3[1]
+set_location_assignment PIN_D10 -to y_3[0]
+set_location_assignment PIN_C3 -to y_4[6]
+set_location_assignment PIN_C4 -to y_4[5]
+set_location_assignment PIN_C5 -to y_4[4]
+set_location_assignment PIN_C6 -to y_4[3]
+set_location_assignment PIN_C7 -to y_4[2]
+set_location_assignment PIN_A13 -to y_4[1]
+set_location_assignment PIN_A14 -to y_4[0]
+set_location_assignment PIN_B6 -to y_5[6]
+set_location_assignment PIN_A11 -to y_5[5]
+set_location_assignment PIN_A6 -to y_5[4]
+set_location_assignment PIN_A7 -to y_5[3]
+set_location_assignment PIN_A9 -to y_5[2]
+set_location_assignment PIN_A10 -to y_5[1]
+set_location_assignment PIN_D3 -to y_5[0]
+set_location_assignment PIN_K25 -to divide
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
